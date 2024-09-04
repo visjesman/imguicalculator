@@ -4,21 +4,31 @@
 #include <imgui.h>
 #include <backends/imgui_impl_glfw.h>
 #include <backends/imgui_impl_opengl3.h>
+#include <vector>
 
 
 
-std::string numberLoop() {
-    int mainnumber1 = 0;
-    char digit[] = {'0', '1', '2', '3', '4', '5', '6', '7', '8', '9' };
-    mainnumber1++;
-    char aChar = digit[mainnumber1];
-    if (mainnumber1 > 9) {
-        mainnumber1 = 0;
-    }
-    return &aChar;
+
+
+std::string numberLoop(int newDigit, std::string currentNumber) {
+    currentNumber += std::to_string(newDigit);
+
+    return currentNumber;
 }
 
+std::vector<int> Add;
+
+void AddnumberToArray(std::string number) {
+    int Number = std::stoi(number);
+    Add.push_back(Number);
+}
+
+
+
+
+
 int main() {
+    std::string currentNumber = "";
     // Initialize GLFW
     if (!glfwInit())
         return -1;
@@ -65,34 +75,57 @@ int main() {
 
         // Your ImGui code here
         ImGui::Text("calculator");
-        ImGui::Text(numberLoop().c_str());
+
+
+
+
         if (ImGui::Button("1"))
-            glfwDestroyWindow(window);
-        ImGui::SameLine();
-        if (ImGui::Button("2"))
-            glfwDestroyWindow(window);
-        ImGui::SameLine();
-        if (ImGui::Button("3"))
-            glfwDestroyWindow(window);
+            currentNumber = numberLoop(1, currentNumber);
+        ImGui::SameLine(); if (ImGui::Button("2"))
+            currentNumber = numberLoop(2, currentNumber);
+        ImGui::SameLine(); if (ImGui::Button("3"))
+            currentNumber = numberLoop(3, currentNumber);
         if (ImGui::Button("4"))
-            glfwDestroyWindow(window);
-        ImGui::SameLine();
-        if (ImGui::Button("5"))
-            glfwDestroyWindow(window);
-        ImGui::SameLine();
-        if (ImGui::Button("6"))
-            glfwDestroyWindow(window);
+            currentNumber = numberLoop(4, currentNumber);
+        ImGui::SameLine(); if (ImGui::Button("5"))
+            currentNumber = numberLoop(5, currentNumber);
+        ImGui::SameLine(); if (ImGui::Button("6"))
+            currentNumber = numberLoop(6, currentNumber);
         if (ImGui::Button("7"))
-            glfwDestroyWindow(window);
-        ImGui::SameLine();
-        if (ImGui::Button("8"))
-            glfwDestroyWindow(window);
-        ImGui::SameLine();
-        if (ImGui::Button("9"))
-            glfwDestroyWindow(window);
+            currentNumber = numberLoop(7, currentNumber);
+        ImGui::SameLine(); if (ImGui::Button("8"))
+            currentNumber = numberLoop(8, currentNumber);
+        ImGui::SameLine(); if (ImGui::Button("9"))
+            currentNumber = numberLoop(9, currentNumber);
         if (ImGui::Button("0"))
+            currentNumber = numberLoop(0, currentNumber);
+
+
+
+        if (ImGui::Button("+"))
+            AddnumberToArray(currentNumber);
+
+
+
+
+
+
+        ImGui::SameLine(); if (ImGui::Button("-"))
             glfwDestroyWindow(window);
-        ImGui::End();
+        ImGui::SameLine(); if (ImGui::Button("/"))
+            glfwDestroyWindow(window);
+        ImGui::SameLine(); if (ImGui::Button("*"))
+            glfwDestroyWindow(window);
+        ImGui::SameLine(); if (ImGui::Button("Enter"))
+            glfwDestroyWindow(window);
+
+
+
+        ImGui::Text("Numbers:");
+        for (size_t i = 0; i < Add.size(); i++) {
+            ImGui::Text("%d", Add[i]);
+        }
+
 
 
         // Rendering
