@@ -1,4 +1,4 @@
-/home/bob/CLionProjects/imguiProject/cmake-build-debug/CMakeFiles/QTtest.dir
-/home/bob/CLionProjects/imguiProject/cmake-build-debug/CMakeFiles/imgui.dir
-/home/bob/CLionProjects/imguiProject/cmake-build-debug/CMakeFiles/edit_cache.dir
-/home/bob/CLionProjects/imguiProject/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/bob/CLionProjects/imguicalculator/cmake-build-debug/CMakeFiles/QTtest.dir
+/home/bob/CLionProjects/imguicalculator/cmake-build-debug/CMakeFiles/imgui.dir
+/home/bob/CLionProjects/imguicalculator/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/bob/CLionProjects/imguicalculator/cmake-build-debug/CMakeFiles/rebuild_cache.dir

@@ -1,5 +1,18 @@
-/var/lib/snapd/snap/clion/291/bin/cmake/linux/x64/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=/var/lib/snapd/snap/clion/291/bin/ninja/linux/x64/ninja -G Ninja -S /home/bob/CLionProjects/imguiProject -B /home/bob/CLionProjects/imguiProject/cmake-build-debug
+/var/lib/snapd/snap/clion/291/bin/cmake/linux/x64/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=/var/lib/snapd/snap/clion/291/bin/ninja/linux/x64/ninja -G Ninja -S /home/bob/CLionProjects/imguicalculator -B /home/bob/CLionProjects/imguicalculator/cmake-build-debug
+-- The C compiler identification is GNU 14.2.1
+-- The CXX compiler identification is GNU 14.2.1
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found OpenGL: /usr/lib64/libOpenGL.so
 -- Found GLEW: /usr/include (found version "2.2.0")
--- Configuring done (0.1s)
+-- Configuring done (0.5s)
 -- Generating done (0.0s)
--- Build files have been written to: /home/bob/CLionProjects/imguiProject/cmake-build-debug
+-- Build files have been written to: /home/bob/CLionProjects/imguicalculator/cmake-build-debug
