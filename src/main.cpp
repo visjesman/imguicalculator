@@ -19,8 +19,12 @@ std::string numberLoop(int newDigit, std::string currentNumber) {
 std::vector<int> Add;
 
 void AddnumberToArray(std::string number) {
-    int Number = std::stoi(number);
-    Add.push_back(Number);
+    if (!number.empty()) {
+        int Number = std::stoi(number);
+        Add.push_back(Number);
+    } else {
+        std::cout << number << " is empty" << std::endl;
+    }
 }
 
 
@@ -102,8 +106,13 @@ int main() {
 
 
 
-        if (ImGui::Button("+"))
-            AddnumberToArray(currentNumber);
+        if (ImGui::Button("+")) {
+            if (!currentNumber.empty()) {
+                AddnumberToArray(currentNumber);
+                currentNumber = "";  // Clear the current number
+            }
+        }
+
 
 
 
