@@ -1,2 +1,2 @@
-# imguicalculator
-this is a simple and bad coded calculator in C++
+# imguiProject
+ bad coded dear imgui calculator
